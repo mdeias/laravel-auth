@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div>
-        <h1>Elenco posts</h1>
+        <h1>Home</h1>
         @if (session('deleted'))
         <div class="alert alert-success" role="alert">
           {{ session('deleted') }}

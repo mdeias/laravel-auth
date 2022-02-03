@@ -37,9 +37,9 @@
                    
                   @auth
                                        
+                  <a class="nav-link" href="{{route('admin.posts.index')}}">Home</a>
                      <a class="nav-link" href="{{route('admin.posts.create')}}">Crea nuovo post</a>
-                     <a class="nav-link" href="{{route('admin.posts.index')}}">elenco post</a>
-                     <a class="nav-link disabled">Disabled</a>
+                     <a class="nav-link" href="{{ route('admin.index') }}">Dashboard</a>
                      
                   @endauth
 

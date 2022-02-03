@@ -11,7 +11,7 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger">DELETE</button>
         </form>  
-        <a href="{{route('admin.posts.index')}}" class="btn btn-info">Elenco post</a> 
+        <a href="{{route('admin.posts.index')}}" class="btn btn-info">Home</a> 
     </div>
 </div>
 @endsection
