@@ -6,7 +6,12 @@
         <h1>{{$post->title}}</h1>
         <p>{{ $post->content }}</p>
         <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-success">EDIT</a>     
-        <a href="" class="btn btn-danger">DELETE</a>     
+        <form class="d-inline" onsubmit=" return confirm('Confermi di voler eliminare {{$post->title}}?') " action="{{route('admin.posts.destroy', $post)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">DELETE</button>
+        </form>  
+        <a href="{{route('admin.posts.index')}}" class="btn btn-info">Elenco post</a> 
     </div>
 </div>
 @endsection

@@ -3,15 +3,7 @@
     @section('content')
 
          <div class="flex-center position-ref full-height">
-            
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Ospite
-                </div>
-
-                
-            </div>
+            <h1>PAGINA OSPITE</h1>
         </div>
     
     @endsection

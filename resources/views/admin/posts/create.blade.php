@@ -58,6 +58,7 @@
               
               <button type="submit" class="btn btn-primary">Invia</button>
               <button type="reset" class="btn btn-secondary">Reset</button>
+              <a href="{{route('admin.posts.index')}}" class="btn btn-info">Elenco post</a>
 
         </form>
             
