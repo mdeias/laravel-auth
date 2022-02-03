@@ -20,6 +20,50 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+
+             
+
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Vai al sito</a>
+                  @auth
+                                       
+                     <a class="nav-link" href="{{route('admin.posts.create')}}">Crea nuovo post</a>
+                     <a class="nav-link" href="#">Pricing</a>
+                     <a class="nav-link disabled">Disabled</a>
+                     
+                  @endauth
+
+                </div>
+
+              </div>
+              <div class="navbar-nav">
+
+                  @auth
+                    <a  class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                  @endauth
+                  @guest
+                  <a class="nav-link" href="#">Login</a>
+                  <a class="nav-link" href="#">Register</a>
+                  @endguest
+              </div>
+
+            </div>
+
+          </nav>
+    </header>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
